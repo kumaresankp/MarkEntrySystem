@@ -5,16 +5,45 @@
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <title>PROJECT1</title>
     <style>
-        .link {
+        .buttoncontainer {
+            display: flex;
+        }
+        
+        .othersubmit {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .link,
+        .form {
             color: white;
             text-decoration: none;
-            background-color: #f4511e;
-            display: inline-block;
+            background-color: #3422ad;
+            display: flex;
+            flex-direction: row;
+            margin: 10px 60px 10px;
             padding: 10px 25px;
+            border: none;
+            border-radius: 20px;
+            padding: 20px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        
+        #course {
+            border: 2px solid #3422ad;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            border-radius: 20px;
+            background-color: #3422ad;
+            color: white;
         }
         
         .style2 {
             font-size: 0.7cm;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         table {
@@ -25,8 +54,8 @@
         }
         
         body {
-            /* background-color: rgba(var(--color-background), var(--tw-bg-opacity));
-            ; */
+            background-color: gainsboro;
+            background-repeat: no-repeat;
         }
         
         .form:hover {
@@ -1005,23 +1034,27 @@
         </table>
 
         <p style="color: #000000; font-size: 0.5cm;">
-            <input type="submit" class="form" />
+            <div class="buttoncontainer">
+                <input type="submit" class="form" />
         </p>
     </form>
-    <form action="pdf" method="post">
-        <p style="color: #000000; font-size: 0.5cm;">
-            <input type="submit" class="link" value="GENERATE PDF" />
-        </p>
-        <!-- <p>&nbsp;</p> -->
-    </form>
+    <div class="othersubmit">
+        <form action="pdf" method="post">
+            <p style="color: #000000; font-size: 0.5cm;">
+                <input type="submit" class="link" value="GENERATE PDF" />
+            </p>
+            <!-- <p>&nbsp;</p> -->
+        </form>
 
 
-    <span><p><a href="generatepdf" target="_blank" class="link">open the file</a></p></span>
-    <form action="update" method="post">
-        <p style="color: #000000; font-size: 0.5cm" ;>
-            <input type="submit" name="Submit" value="UPDATE" class="link" />
-        </p>
-    </form>
+        <span><p><a href="generatepdf" target="_blank" class="link">open the file</a></p></span>
+        <form action="update" method="post">
+            <p style="color: #000000; font-size: 0.5cm" ;>
+                <input type="submit" name="Submit" value="UPDATE" class="link" />
+            </p>
+        </form>
+    </div>
+    </div>
 </body>
 
 </html>
